@@ -1,0 +1,33 @@
+<template>
+  <div class="layout">
+    <header class="app-header">
+      <div class="layout-container">
+        <div class="app-header-content">
+          <div class="header-image">
+            <img src="../static/aurelia.jpg" />
+          </div>
+          <form id="search-form" class="search-form">
+            <input class="search-input" value.bind="searchText" type="text" placeholder="search">
+            <button class="search-btn" type="button" click.trigger="getData(searchText)">search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="layout-container">
+      <article class="app-main">
+        <div class="post-list" if.bind="!loading && items.length > 0">
+          <a repeat.for="item of items" class="post-list-item" href.bind="item.url" target="_blank">${item.title}</a>
+        </div>
+        <div if.bind="!loading && items.length == 0" style="text-align: center">
+          No results found
+        </div>
+        <div class="list-loader" if.bind="loading">
+          <div class="spinner"></div>
+        </div>
+      </article>
+      <footer class="app-footer">made with <a href="https://cycle.js.org" target="_blank">Cycle.js</a>. Check out the
+        source on <a href="https://github.com/nphyx/framework-comparison-article-cycle-js" target="_blank">Github</a>!
+      </footer>
+    </div>
+  </div>
+</template>
