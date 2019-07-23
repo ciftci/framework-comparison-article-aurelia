@@ -6,7 +6,7 @@
           <div class="header-image">
             <img src="../static/aurelia.jpg" />
           </div>
-          <form id="search-form" class="search-form">
+          <form id="search-form" class="search-form" submit.delegate="getData(searchText)">
             <input class="search-input" value.bind="searchText" type="text" placeholder="search">
             <button class="search-btn" type="button" click.trigger="getData(searchText)">search</button>
           </form>
