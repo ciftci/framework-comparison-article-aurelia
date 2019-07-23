@@ -4,6 +4,18 @@ This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
 For more information, go to https://aurelia.io/docs/cli/webpack
 
+First, you need to install aurelia-cli if not installed:
+
+```
+    npm i aurelia-cli -g
+```
+
+Then you need to install the npm packages:
+
+```
+    npm install
+```
+
 ## Run dev app
 
 Run `au run`, then open `http://localhost:8080`
