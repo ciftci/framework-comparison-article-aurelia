@@ -6,9 +6,25 @@
           <div class="header-image">
             <img src="../static/aurelia.jpg" />
           </div>
-          <form id="search-form" class="search-form" submit.delegate="getData(searchText)">
-            <input class="search-input" value.bind="searchText" type="text" placeholder="search">
-            <button class="search-btn" type="button" click.trigger="getData(searchText)">search</button>
+          <form
+            id="search-form"
+            class="search-form"
+            submit.delegate="getData(searchText)"
+          >
+            <input
+              class="search-input"
+              value.bind="searchText"
+              type="text"
+              placeholder="search"
+            />
+            <button
+              class="search-btn"
+              type="button"
+              disabled.bind="loading"
+              click.trigger="getData(searchText)"
+            >
+              search
+            </button>
           </form>
         </div>
       </div>
@@ -16,7 +32,13 @@
     <div class="layout-container">
       <article class="app-main">
         <div class="post-list" if.bind="!loading && items.length > 0">
-          <a repeat.for="item of items" class="post-list-item" href.bind="item.url" target="_blank">${item.title}</a>
+          <a
+            repeat.for="item of items"
+            class="post-list-item"
+            href.bind="item.url"
+            target="_blank"
+            >${item.title}</a
+          >
         </div>
         <div if.bind="!loading && items.length == 0" style="text-align: center">
           No results found
@@ -25,8 +47,14 @@
           <div class="spinner"></div>
         </div>
       </article>
-      <footer class="app-footer">made with <a href="https://aurelia.io" target="_blank">Aurelia</a>. Check out the
-        source on <a href="https://github.com/ciftci/framework-comparison-article-aurelia" target="_blank">Github</a>!
+      <footer class="app-footer">
+        made with <a href="https://aurelia.io" target="_blank">Aurelia</a>.
+        Check out the source on
+        <a
+          href="https://github.com/ciftci/framework-comparison-article-aurelia"
+          target="_blank"
+          >Github</a
+        >!
       </footer>
     </div>
   </div>
