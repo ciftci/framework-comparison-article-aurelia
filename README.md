@@ -1,5 +1,11 @@
 # `framework-comparison-article-aurelia`
 
+This repo and its [live demo](https://ciftci-aurelia.web.app/) are published as part of the corresponding blog article at https://www.toptal.com/javascript/whats-better-than-vue-js-react-angular
+
+Visit https://www.toptal.com/blog and subscribe to our newsletter to read great posts!
+
+* * *
+
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
 For more information, go to https://aurelia.io/docs/cli/webpack
